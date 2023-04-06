@@ -1,20 +1,18 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.example.carousel'
+    namespace 'com.vappfactory.carousel'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.carousel"
         minSdk 26
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,11 +31,9 @@ android {
 }
 
 dependencies {
-
     implementation coreKtx
     implementation appCompat
     implementation material
-    implementation constraintLayout
     testImplementation junit
     androidTestImplementation junitTestExt
     androidTestImplementation espresso

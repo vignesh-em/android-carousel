@@ -4,3 +4,14 @@ plugins {
     id 'com.android.library' version '7.4.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
 }
+
+ext {
+    coreKtx = 'androidx.core:core-ktx:1.7.0'
+    appCompat = 'androidx.appcompat:appcompat:1.6.1'
+    material = 'com.google.android.material:material:1.8.0'
+    constraintLayout = 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    junit = 'junit:junit:4.13.2'
+    junitTestExt = 'androidx.test.ext:junit:1.1.5'
+    espresso = 'androidx.test.espresso:espresso-core:3.5.1'
+}
