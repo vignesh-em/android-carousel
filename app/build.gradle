@@ -38,6 +38,8 @@ dependencies {
     implementation appCompat
     implementation material
     implementation constraintLayout
+    implementation recyclerView
+
     testImplementation junit
     androidTestImplementation junitTestExt
     androidTestImplementation espresso

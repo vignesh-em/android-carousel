@@ -34,6 +34,8 @@ dependencies {
     implementation coreKtx
     implementation appCompat
     implementation material
+    implementation recyclerView
+
     testImplementation junit
     androidTestImplementation junitTestExt
     androidTestImplementation espresso
