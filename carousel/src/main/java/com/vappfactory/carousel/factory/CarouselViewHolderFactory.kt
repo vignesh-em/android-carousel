@@ -5,7 +5,7 @@ import com.vappfactory.carousel.CarouselViewHolder
 import com.vappfactory.carousel.Item
 
 abstract class CarouselViewHolderFactory {
-    abstract fun create(parent: ViewGroup, viewType: Int): CarouselViewHolder
+    abstract fun create(parent: ViewGroup, clazz: Class<out Item>): CarouselViewHolder
 
     internal fun canHandle(clazz: Class<out Item>) = types.contains(clazz)
 
