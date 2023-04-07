@@ -6,6 +6,7 @@ import androidx.constraintlayout.helper.widget.Carousel
 import androidx.databinding.DataBindingUtil
 import com.example.carousel.databinding.ActivityMainBinding
 import com.vappfactory.carousel.CarouselAdapter
+import com.vappfactory.carousel.Item
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             this.adapter = adapter
         }
 
-        adapter.submitList(listOf(Grid(1, 2), Alpha("")))
+        val list = mutableListOf<Item>()
+        for (i in 0 until 1000) {
+            list.add(Grid(i, i + 1))
+            list.add(Alpha("$i ${i + 1}"))
+        }
+        adapter.submitList(list)
     }
 }

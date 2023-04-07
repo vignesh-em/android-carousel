@@ -6,10 +6,14 @@ import com.vappfactory.carousel.Item
 import com.vappfactory.carousel.factory.CarouselViewHolderFactory
 
 class AppCarouselFactory : CarouselViewHolderFactory() {
-    override fun create(parent: ViewGroup, viewType: Int): CarouselViewHolder {
-        return GridViewHolder(parent.rootView)
+    override fun create(parent: ViewGroup, clazz: Class<out Item>): CarouselViewHolder {
+        return when (clazz) {
+            Grid::class.java -> GridViewHolder(parent.rootView)
+            Alpha::class.java -> AlphaViewHolder(parent.rootView)
+            else -> throw IllegalStateException("Cannot create a view holder for this type")
+        }
     }
 
     override val types: Set<Class<out Item>>
-        get() = setOf(Grid::class.java)
+        get() = setOf(Grid::class.java, Alpha::class.java)
 }
