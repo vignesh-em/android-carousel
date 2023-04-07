@@ -9,10 +9,12 @@
     </data>
 
     <TextView
-        android:id="@+id/grid_text"
+        android:id="@+id/alpha_text"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/teal_200"
+        android:layout_margin="8dp"
+        android:background="#CDDC39"
+        android:gravity="center"
         android:text="@{text}"
         android:textColor="@color/black" />
 </layout>
