@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.helper.widget.Carousel
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carousel.databinding.ActivityMainBinding
 import com.vappfactory.carousel.CarouselAdapter
 import com.vappfactory.carousel.Item
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val viewHolderFactories = listOf(AppCarouselFactory())
         val adapter = CarouselAdapter(viewHolderFactories)
         binding.recycler.run {
-
+            layoutManager = LinearLayoutManager(baseContext, LinearLayoutManager.VERTICAL, false)
             this.adapter = adapter
         }
 

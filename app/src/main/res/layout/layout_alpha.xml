@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="text"
+            type="String" />
+    </data>
+
+    <TextView
+        android:id="@+id/alpha_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/teal_200"
+        android:text="@{text}"
+        android:textColor="@color/black" />
+</layout>
